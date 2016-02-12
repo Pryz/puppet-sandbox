@@ -1,3 +1,6 @@
+machine:
+  ruby:
+    version: 2.2.3
 dependencies:
   pre:
     - wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
