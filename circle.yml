@@ -9,4 +9,4 @@ test:
   pre:
     - r10k puppetfile install
   post:
-    - puppet apply ~/manifests/site.pp
+    - puppet apply --modulepath ./modules manifests/site.pp
