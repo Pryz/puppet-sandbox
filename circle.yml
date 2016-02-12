@@ -1,0 +1,12 @@
+dependencies:
+  pre:
+    - wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
+    - sudo dpkg -i puppetlabs-release-trusty.deb
+    - sudo apt-get update
+    - sudo apt-get install puppet-common
+    - gem install --no-ri --no-rdoc r10k
+test:
+  pre:
+    - r10k puppetfile install
+  post:
+    - puppet apply ~/manifests/site.pp
