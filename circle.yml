@@ -10,3 +10,4 @@ test:
     - r10k puppetfile install
   post:
     - sudo puppet apply --modulepath ./modules manifests/site.pp
+    - rake
